@@ -13,6 +13,7 @@
 }
 
 :root {
+  --color-primary: #ff5c35;
   font-family: "Dana", sans-serif;
 }
 
@@ -20,16 +21,13 @@ header {
   height: 94px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
 .basalam_image {
   width: 88px;
   height: 40px;
-}
-
-.list-logo {
-  width: 16px;
-  height: 16px;
 }
 
 .categories {
@@ -40,9 +38,15 @@ header {
 .categories button {
   border: none;
   background-color: #ffffff;
+  cursor: pointer;
+  padding: 8px 16px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .categories button:hover {
-  color: #ff5c35;
+  color: var(--color-primary);
   transition: all 0.3s ease;
 }
