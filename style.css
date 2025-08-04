@@ -1,0 +1,20 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+header {
+    height: 94px;
+    display: flex;
+}
+
+.basalam_image {
+    width: 88px;
+    height: 40px;
+}
+
+.list-logo {
+    width: 16px;
+    height: 16px;
+}
