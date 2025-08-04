@@ -1,20 +1,38 @@
 * {
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Dana";
+  src: url("./fonts/Dana/dana_regular.woff") format("woff"),
+    url("./fonts/Dana/dana_regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  font-family: "Dana", sans-serif;
 }
 
 header {
-    height: 94px;
-    display: flex;
+  height: 94px;
+  display: flex;
+  align-items: center;
 }
 
 .basalam_image {
-    width: 88px;
-    height: 40px;
+  width: 88px;
+  height: 40px;
 }
 
 .list-logo {
-    width: 16px;
-    height: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.categories {
+  display: flex;
+  flex-direction: row;
 }
