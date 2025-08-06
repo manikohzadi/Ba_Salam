@@ -22,7 +22,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
+  padding: 0 6cm;
 }
 
 .basalam_image {
@@ -43,10 +43,50 @@ header {
   border-radius: 4px;
   display: flex;
   align-items: center;
+  transition: all 0.3s ease;
   gap: 8px;
 }
 
 .categories button:hover {
   color: var(--color-primary);
   transition: all 0.3s ease;
+}
+
+.search-bar {
+  width: 688px;
+  height: 52px;
+  background-color: #F3F3F4;
+  border-radius: 8px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.search-bar .bi-camera {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  cursor: pointer;
+  margin-left: 8px;
+}
+
+.search-bar input {
+  width: 596px;
+  height: 37px;
+  background-color: #F3F3F4;
+  border: none;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.search-bar .bi-search {
+  font-size: 24px;
+  width: 24px;
+  height: 24px;
+  line-height: 24px;
+  opacity: 0.5;
+  margin-left: 8px;
 }
