@@ -13,7 +13,7 @@
 }
 
 :root {
-  --color-primary: #ff5c35;
+  --color-primary--: #ff5c35;
   font-family: "Dana", sans-serif;
 }
 
@@ -48,7 +48,7 @@ header {
 }
 
 .categories button:hover {
-  color: var(--color-primary);
+  color: var(--color-primary--);
   transition: all 0.3s ease;
 }
 
@@ -60,6 +60,7 @@ header {
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  margin-left: 30px;
 }
 
 .search-bar .bi-camera {
@@ -89,4 +90,98 @@ header {
   line-height: 24px;
   opacity: 0.5;
   margin-left: 8px;
+}
+
+.header-user-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 494.38px;
+  height: 52px;
+}
+
+.header-user-actions i {
+  font-size: 28px;
+  width: 28px;
+  height: 28px;
+}
+
+.header-user-actions .chats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  width: 60.23px;
+  height: 52px;
+}
+
+.header-user-actions .chats .correct-ico {
+  position: relative;
+}
+
+.header-user-actions .chats .correct-ico .bi-chat-left {
+  position: absolute;
+  z-index: 0;
+  right: 8px;
+  bottom: 20px;
+}
+
+.header-user-actions .login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  width: 60.23px;
+  height: 52px;
+}
+
+.header-user-actions .login span span {
+  opacity: 0.3;
+}
+
+.header-user-actions .login i {
+  margin: 0px 0px 15px 0px;
+}
+
+.header-user-actions .cart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+  width: 60.23px;
+  height: 52px;
+}
+
+.header-user-actions .cart i {
+  margin: 0px 0px 15px 0px;
+}
+
+.header-user-actions .add-booth {
+  border: 3px solid var(--color-primary--);
+  border-radius: 8px;
+}
+
+.header-user-actions .add-booth button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: var(--color-primary--);
+  border-radius: 8px;
+  width: 128.73px;
+  height: 48px;
+  transition: all 0.3s ease;
+}
+
+.header-user-actions .add-booth button div {
+  margin-left: 10px;
+}
+
+.header-user-actions .add-booth button:hover {
+  background-color: #ff5d355e;
+  transition: all 0.3s ease;
 }
