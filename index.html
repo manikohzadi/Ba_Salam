@@ -15,50 +15,124 @@
     <title>basalam</title>
   </head>
   <body>
-    <img src="./images/gold.gif" alt="gold" />
+    <img src="./images/gold.gif" alt="طلا" class="image1" />
     <header>
       <div>
         <img
           class="basalam_image"
           src="images/basalam-logotype.svg"
-          alt="basalam-image"
+          alt="لوگو باسلام"
         />
       </div>
       <div class="categories">
-        <button>
+        <button aria-label="باز کردن دسته‌بندی‌ها">
           <i class="bi bi-list"></i>
-          <span><strong>دسته&zwnj;بندی&zwnj;ها</strong></span>
+          <span><strong>دسته‌بندی‌ها</strong></span>
         </button>
       </div>
       <div class="search-bar">
-        <i class="bi-search"></i>
-        <input type="text" placeholder="جست‌&zwnj;و&zwnj;جو در بازار" />
-        <i class="bi-camera"></i>
+        <i class="bi-search" aria-label="جست‌وجو"></i>
+        <input
+          type="text"
+          placeholder="جست‌وجو در بازار"
+          aria-label="جست‌وجو در بازار"
+        />
+        <i class="bi-camera" aria-label="جست‌وجوی تصویری"></i>
       </div>
       <section class="header-user-actions">
         <article class="chats">
           <div class="correct-ico">
-            <i class="bi-chat-left"></i>
-            <i class="bi-chat-right"></i>
+            <i class="bi-chat" aria-label="گفت‌وگوها"></i>
           </div>
-          <span class="text">گفت&zwnj;و&zwnj;گو&zwnj;ها</span>
+          <span class="text">گفت‌وگوها</span>
         </article>
         <article class="login">
-          <i class="bi-person"></i>
-          <span>عضویت&zwnj;<span>|</span>&zwnj;ورود</span>
+          <i class="bi-person" aria-label="عضویت یا ورود"></i>
+          <span>عضویت<span>|</span>ورود</span>
         </article>
         <article class="cart">
-          <i class="bi-cart"></i>
+          <i class="bi-cart" aria-label="سبد خرید"></i>
           <span>سبد خرید</span>
         </article>
         <article class="add-booth">
-          <button>
+          <button aria-label="ایجاد غرفه">
             <div><i class="bi-shop"></i></div>
             ایجاد غرفه
           </button>
         </article>
       </section>
     </header>
+    <nav class="navbar2">
+      <div class="basalam_avatar">
+        <img src="images/basalam_avatar.png" alt="آواتار باسلام" />
+        <span>باسلام</span>
+      </div>
+      <div class="basalam_avatar2">
+        <img
+          src="https://statics.basalam.com/public-44/users/8M4bDz/11-22/wJd1vG8N1aBHbDyJJwFxSyYl5LFbElacWC2drI5AQ42eZ8YvUG.jpg_200X200X70.jpg"
+          alt="آواتار باسلام ۱"
+        />
+        <span>باسلام</span>
+      </div>
+      <div class="basalam_avatar2">
+        <img
+          src="https://statics.basalam.com/public-9/users/Jk2b6W/06-24/NaE4G79zPJ4SzYSuKm7JR6Xs4FWGcIPS2gBbmwz4kjKCJzNDQQ.png_200X200X70.png"
+          alt="آواتار باسلام ۲"
+        />
+        <span>باسلام</span>
+      </div>
+      <div class="basalam_avatar2">
+        <img
+          src="https://statics.basalam.com/public-64/users/zoxQGa/02-23/HA8uHOKq2JjrcBNr6LHdMxB5oDTEJ6fkKX1xXmB2SbFT0FKaf6.jpg_200X200X70.jpg"
+          alt="آواتار باسلام ۳"
+        />
+        <span>باسلام</span>
+      </div>
+      <div class="basalam_avatar2">
+        <img
+          src="https://statics.basalam.com/public-85/users/Bx2mgQ/05-23/Ic0xs6NEzVI1SeEjwTkhriZ9lbO7p4GgMEwEVOHAa68muQrDwb.jpg_200X200X70.jpg"
+          alt="آواتار باسلام ۴"
+        />
+        <span>باسلام</span>
+      </div>
+      <div class="basalam_avatar2">
+        <img
+          src="https://statics.basalam.com/public-38/users/16bNlP/10-17/WkA18tbAINNtavz5e0UJvjm6klpeRkVEMUBrqXep0Hd71IdAXb.jpg_200X200X70.jpg"
+          alt="آواتار باسلام ۵"
+        />
+        <span>باسلام</span>
+      </div>
+      <section>
+        <article>برای استوری‌های بیشتر</article>
+        <article class="btn1">
+          <button>برو بازارگردی</button>
+          <i class="bi-arrow-left-short"></i>
+        </article>
+      </section>
+    </nav>
+    <div class="ads-image">
+      <div class="slider-btns">
+        <div>
+          <button aria-label="اسلاید بعدی">
+            <i class="bi-arrow-right"></i>
+          </button>
+        </div>
+        <div>
+          <button aria-label="اسلاید قبلی">
+            <i class="bi-arrow-left"></i>
+          </button>
+        </div>
+      </div>
+      <div class="slides">
+        <span class="slide active" aria-label="اسلاید فعال"></span>
+        <span class="slide" aria-label="اسلاید"></span>
+        <span class="slide" aria-label="اسلاید"></span>
+        <span class="slide" aria-label="اسلاید"></span>
+        <span class="slide" aria-label="اسلاید"></span>
+        <span class="slide" aria-label="اسلاید"></span>
+        <span class="slide end" aria-label="اسلاید"></span>
+      </div>
+    </div>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
