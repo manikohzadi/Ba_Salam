@@ -1,5 +1,24 @@
 {
+  "name": "ba_salam",
+  "version": "1.0.0",
+  "description": "این پروژه در مورد طراحی سایت باسلام است.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manikohzadi/Ba_Salam.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/manikohzadi/Ba_Salam/issues"
+  },
+  "homepage": "https://github.com/manikohzadi/Ba_Salam#readme",
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.0",
     "bootstrap": "^5.3.7",
     "bootstrap-icons": "^1.13.1"
   }
