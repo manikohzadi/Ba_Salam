@@ -3,68 +3,86 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="باسلام - خرید مستقیم از تولیدکنندگان ایرانی"
+    />
+    <link rel="preconnect" href="https://statics.basalam.com" />
     <link rel="stylesheet" href="style.css" />
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"
-    />
-    <title>basalam</title>
+    <title>باسلام | Basalam</title>
   </head>
   <body>
-    <img src="./images/gold.gif" alt="طلا" class="image1" />
-    <header>
+    <img
+      src="./images/gold.gif"
+      alt="تصویر متحرک طلا"
+      width="100"
+      height="100"
+      class="image1"
+    />
+
+    <header role="banner">
       <div>
         <img
           class="basalam_image"
           src="images/basalam-logotype.svg"
           alt="لوگو باسلام"
+          width="120"
+          height="40"
         />
       </div>
-      <div class="categories">
-        <button aria-label="باز کردن دسته‌بندی‌ها">
-          <i class="bi bi-list"></i>
+
+      <nav class="categories" role="navigation" aria-label="منوی اصلی">
+        <button type="button" aria-haspopup="true" aria-expanded="false">
+          <i class="bi bi-list" aria-hidden="true"></i>
           <span><strong>دسته‌بندی‌ها</strong></span>
         </button>
-      </div>
-      <div class="search-bar">
-        <i class="bi-search" aria-label="جست‌وجو"></i>
+      </nav>
+
+      <div class="search-bar" role="search">
+        <i class="bi-search" aria-hidden="true"></i>
         <input
-          type="text"
+          type="search"
           placeholder="جست‌وجو در بازار"
           aria-label="جست‌وجو در بازار"
         />
-        <i class="bi-camera" aria-label="جست‌وجوی تصویری"></i>
+        <i class="bi-camera" aria-hidden="true"></i>
       </div>
-      <section class="header-user-actions">
+
+      <section class="header-user-actions" role="complementary">
         <article class="chats">
           <div class="correct-ico">
-            <i class="bi-chat" aria-label="گفت‌وگوها"></i>
+            <i class="bi-chat" aria-hidden="true"></i>
           </div>
           <span class="text">گفت‌وگوها</span>
         </article>
+
         <article class="login">
-          <i class="bi-person" aria-label="عضویت یا ورود"></i>
-          <span>عضویت<span>|</span>ورود</span>
+          <i class="bi-person" aria-hidden="true"></i>
+          <span>عضویت<span class="separator">|</span>ورود</span>
         </article>
+
         <article class="cart">
-          <i class="bi-cart" aria-label="سبد خرید"></i>
+          <i class="bi-cart" aria-hidden="true"></i>
           <span>سبد خرید</span>
         </article>
+
         <article class="add-booth">
-          <button aria-label="ایجاد غرفه">
-            <div><i class="bi-shop"></i></div>
+          <button type="button" aria-label="ایجاد غرفه در باسلام">
+            <div><i class="bi-shop" aria-hidden="true"></i></div>
             ایجاد غرفه
           </button>
         </article>
       </section>
     </header>
-    <nav class="navbar2">
+
+    <nav class="navbar2" role="navigation" aria-label="استوری‌های باسلام">
       <div class="basalam_avatar">
-        <img src="images/basalam_avatar.png" alt="آواتار باسلام" />
+        <img
+          src="images/basalam_avatar.png"
+          alt="آواتار رسمی باسلام"
+          width="40"
+          height="40"
+        />
         <span>باسلام</span>
       </div>
       <div class="basalam_avatar2">
@@ -105,40 +123,81 @@
       <section>
         <article>برای استوری‌های بیشتر</article>
         <article class="btn1">
-          <button>برو بازارگردی</button>
-          <i class="bi-arrow-left-short"></i>
+          <button type="button">برو بازارگردی</button>
+          <i class="bi-arrow-left-short" aria-hidden="true"></i>
         </article>
       </section>
     </nav>
-    <div class="ads-image">
-      <div class="slider-btns">
-        <div>
-          <button aria-label="اسلاید بعدی">
-            <i class="bi-arrow-right"></i>
-          </button>
+
+    <main role="main">
+      <div class="ads-image" role="region" aria-label="اسلایدر تبلیغات">
+        <div class="slider-btns">
+          <div>
+            <button type="button" aria-label="اسلاید بعدی">
+              <i class="bi-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+          <div>
+            <button type="button" aria-label="اسلاید قبلی">
+              <i class="bi-arrow-left" aria-hidden="true"></i>
+            </button>
+          </div>
         </div>
-        <div>
-          <button aria-label="اسلاید قبلی">
-            <i class="bi-arrow-left"></i>
-          </button>
+        <div class="slides" role="list">
+          <span class="slide active" role="listitem" aria-current="true"></span>
+          <span class="slide" role="listitem"></span>
+          <span class="slide" role="listitem"></span>
+          <span class="slide" role="listitem"></span>
+          <span class="slide" role="listitem"></span>
+          <span class="slide" role="listitem"></span>
+          <span class="slide end" role="listitem"></span>
         </div>
       </div>
-      <div class="slides">
-        <span class="slide active" aria-label="اسلاید فعال"></span>
-        <span class="slide" aria-label="اسلاید"></span>
-        <span class="slide" aria-label="اسلاید"></span>
-        <span class="slide" aria-label="اسلاید"></span>
-        <span class="slide" aria-label="اسلاید"></span>
-        <span class="slide" aria-label="اسلاید"></span>
-        <span class="slide end" aria-label="اسلاید"></span>
-      </div>
-    </div>
-    <section class="category-bar">
-      <article>
-        <i class="bi bi-percent"></i>
-        <span>تخفیف‌ ها</span>
-      </article>
-    </section>
-    <script type="module" src="./main.js"></script>
+
+      <section
+        class="category-bar"
+        role="navigation"
+        aria-label="دسته‌بندی‌های محبوب"
+      >
+        <article>
+          <i class="bi bi-lamp" aria-hidden="true"></i>
+          <span>لوازم خانگی برقی</span>
+        </article>
+        <article>
+          <img src="./images/ring-icon2.png" alt="حلقه" />
+          <span>طلا</span>
+        </article>
+        <article>
+          <i class="bi bi-basket" aria-hidden="true"></i>
+          <span>خرید کالاهای اساسی</span>
+        </article>
+        <article>
+          <i class="bi bi-book-half" aria-hidden="true"></i>
+          <span>کتاب های کنکور</span>
+        </article>
+        <article>
+          <i class="bi bi-box" aria-hidden="true"></i>
+          <span>خرید و ارسال جهیزیه</span>
+        </article>
+        <article>
+          <img src="./images/offer-icon.png" alt="پیشنهاد" />
+          <span>پیشنهاد ویژه</span>
+        </article>
+        <article>
+          <i class="fas fa-laptop" aria-hidden="true"></i>
+          <span>لوزام خانگی برقی</span>
+        </article>
+        <article>
+          <i class="bi bi-fan" aria-hidden="true"></i>
+          <span>سرمایش و گرمایش</span>
+        </article>
+        <article>
+          <i class="bi bi-percent" aria-hidden="true"></i>
+          <span>تخفیف‌ها و پیشنهادها</span>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="main.js"></script>
   </body>
 </html>
