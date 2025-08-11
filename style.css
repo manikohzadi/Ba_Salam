@@ -21,6 +21,11 @@
   --color-primary: #ff5c35;
 }
 
+::selection {
+  background-color: #ff5d356c;
+  color: #000000;
+}
+
 .image1 {
   width: 100vw;
   display: block;
@@ -311,6 +316,7 @@ header {
   align-items: center;
   flex-wrap: wrap;
   gap: 10px;
+  margin-bottom: 50px;
 }
 
 .category-bar article {
@@ -318,6 +324,7 @@ header {
   flex-direction: column;
   align-items: center;
   gap: 5px;
+  cursor: pointer;
 }
 
 .category-bar i,
@@ -338,6 +345,151 @@ header {
   font-size: 14px;
   color: #333;
   text-align: center;
+}
+
+.top-products {
+  display: flex;
+  justify-content: center;
+  width: 1839px;
+  height: 673.27px;
+  position: relative;
+}
+
+.top-products .basalam-foot-logo-circle, .products {
+  background-color: var(--color-primary);
+  display: flex;
+}
+
+.top-products .basalam-foot-logo-circle {
+  border-radius: 50%;
+  width: 320px;
+  height: 320px;
+  justify-content: center;
+  position: absolute;
+  z-index: 1;
+}
+
+.top-products .basalam-foot-logo-circle img {
+  width: 106px;
+  height: 63px;
+  padding: 26px 0px 0px 0px;
+  box-sizing: content-box;
+}
+
+.top-products .products {
+  background-color: var(--color-primary);
+  display: flex;
+  width: 1424px;
+  height: 583.27px;
+  border-radius: 16px;
+  align-self: flex-end;
+  position: absolute;
+  z-index: 2;
+}
+
+.top-products .products .texts {
+  display: flex;
+  align-self: flex-start;
+  font-size: 18px;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+
+.top-products .products .texts .offers {
+  color: #ffffff;
+}
+
+.top-products .products .texts .see-all{
+  cursor: pointer;
+}
+
+.top-products .products .product-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.top-products .products .product-cards .card {
+  background-color: #ffffff;
+  width: 239.27px;
+  height: 486.27px;
+  display: flex;
+  align-items: center;
+}
+
+.top-products .products .product-cards .card .product-image {
+  margin-top: 5px;
+  width: 207.27px;
+  height: 207.27px;
+  background: url('./images/product1.jpg') no-repeat center center;
+  background-size: cover;
+  border-radius: 8px;
+  position: relative;
+}
+
+.top-products .products .product-cards .card .product-image span {
+  background-color: var(--color-primary);
+  color: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  padding: 4px 8px;
+  display: inline-block;
+}
+
+.top-products .products .product-cards .card .product-name {
+  margin-top: 5px;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.top-products .products .product-cards .card .product-name:hover {
+  color: var(--color-primary);
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.top-products .products .product-cards .card .stars {
+  display: flex;
+  margin-top: 10px;
+  align-self: flex-start;
+}
+
+.top-products .products .product-cards .card .stars i {
+  color: gray;
+  margin-left: 7px;
+}
+
+.top-products .products .product-cards .card .stars .comments {
+  color: gray;
+  margin-right: 7px;
+}
+
+.top-products .products .product-cards .card .offer {
+  display: flex;
+  align-items: center;
+}
+
+.top-products .products .product-cards .card .offer .discount {
+  color: var(--color-primary);
+  background-color: #ff5d352c;
+  border-radius: 5px;
+  margin-top: 10px;
+  padding: 3px 3px;
+  margin-left: 90px;
+}
+
+.top-products .products .product-cards .card .offer .original-price span {
+  font-size: 1.275rem;
+}
+
+.top-products .products .product-cards .card .discount-price {
+  display: flex;
+  align-self: flex-end;
 }
 
 /* 🟢 گوشی */
