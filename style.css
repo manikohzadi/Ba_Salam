@@ -19,6 +19,14 @@
 
 :root {
   --color-primary: #ff5c35;
+  --color-primary-light: #ff5d352c;
+  --color-gray: #f3f3f4;
+  --color-text: #333;
+  --border-radius-sm: 4px;
+  --border-radius-md: 8px;
+  --spacing-sm: 8px;
+  --spacing-md: 12px;
+  --spacing-lg: 20px;
 }
 
 ::selection {
@@ -194,7 +202,7 @@ header {
   border-radius: 8px;
   width: 128.73px;
   height: 48px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .header-user-actions .add-booth button div {
@@ -351,7 +359,7 @@ header {
   display: flex;
   justify-content: center;
   width: 1839px;
-  height: 673.27px;
+  height: 723.27px;
   position: relative;
 }
 
@@ -379,12 +387,15 @@ header {
 .top-products .products {
   background-color: var(--color-primary);
   display: flex;
+  flex-direction: column;
   width: 1424px;
-  height: 583.27px;
+  height: 633.27px;
   border-radius: 16px;
   align-self: flex-end;
   position: absolute;
   z-index: 2;
+  gap: var(--spacing-lg);
+  padding: var(--spacing-lg);
 }
 
 .top-products .products .texts {
@@ -394,7 +405,6 @@ header {
   justify-content: space-between;
   width: 100%;
   padding: 20px;
-  margin-bottom: 40px;
 }
 
 .top-products .products .texts .offers {
@@ -408,16 +418,19 @@ header {
 .top-products .products .product-cards {
   display: flex;
   justify-content: center;
-  align-items: center;
-  gap: 20px;
+  align-items: stretch;
+  gap: var(--spacing-lg);
+  margin: 0 var(--spacing-sm);
 }
 
 .top-products .products .product-cards .card {
   background-color: #ffffff;
-  width: 239.27px;
-  height: 486.27px;
+  border-radius: var(--border-radius-md);
+  padding: var(--spacing-md);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  max-width: 300px;
 }
 
 .top-products .products .product-cards .card .product-image {
@@ -426,31 +439,51 @@ header {
   height: 207.27px;
   background: url('./images/product1.jpg') no-repeat center center;
   background-size: cover;
-  border-radius: 8px;
+  border-radius: var(--border-radius-md);
   position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 .top-products .products .product-cards .card .product-image span {
   background-color: var(--color-primary);
   color: #ffffff;
-  border-radius: 5px;
+  border-radius: var(--border-radius-sm);
   position: absolute;
-  top: 4px;
-  right: 4px;
-  padding: 4px 8px;
+  top: var(--spacing-sm);
+  right: var(--spacing-sm);
+  padding: 4px var(--spacing-sm);
   display: inline-block;
+}
+
+.top-products .products .product-cards .card .discount-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  padding: 4px 8px;
+  border-radius: 4px;
 }
 
 .top-products .products .product-cards .card .product-name {
   margin-top: 5px;
   font-size: 0.9rem;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease-in-out;
 }
 
 .top-products .products .product-cards .card .product-name:hover {
   color: var(--color-primary);
   cursor: pointer;
   transition: color 0.3s ease;
+}
+
+.top-products .products .product-cards .card .product-name:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
 }
 
 .top-products .products .product-cards .card .stars {
@@ -484,12 +517,34 @@ header {
 }
 
 .top-products .products .product-cards .card .offer .original-price span {
-  font-size: 1.275rem;
+  font-size: 1.185rem;
 }
 
 .top-products .products .product-cards .card .discount-price {
   display: flex;
   align-self: flex-end;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.time-box {
+  background-color: #ff5d352c;
+  color: var(--color-primary);
+  padding: 0 4px;
+  border-radius: 5px;
+}
+
+.text-primary2 { color: var(--color-primary); }
+.bg-primary-light { background-color: var(--color-primary-light); }
+.cursor-pointer { cursor: pointer; }
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* 🟢 گوشی */
@@ -505,4 +560,10 @@ header {
 /* 🔵 دسکتاپ */
 @media screen and (min-width: 1025px) and (min-height: 800px) {
   /* استایل مخصوص دسکتاپ */
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+  }
 }
