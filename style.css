@@ -694,38 +694,37 @@ header {
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr); /* 6 ستون */
-  grid-template-rows: repeat(2, 200px); /* 2 ردیف */
+  grid-template-columns: repeat(6, 1fr);
   gap: 10px;
-  width: 90%;
-  margin: auto;
+  width: 1424px;
+  margin: 30px auto;
+  direction: ltr;
 }
 
 .grid-item {
-  background-size: cover;
-  background-position: center;
+  position: relative;
+  overflow: hidden;
   border-radius: 8px;
+  background-color: var(--color-white);
 }
 
-/* مربع‌ها */
-.square {
-  grid-column: span 1;
-  grid-row: span 1;
-  background-image: url("./images/charlie_chaplin.jpg");
-}
-
-/* مستطیل افقی */
-.rect-horizontal {
-  grid-column: span 2;
-  grid-row: span 1;
-  background-image: url("./images/book.jpg");
+.grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* مستطیل عمودی */
 .rect-vertical {
-  grid-column: span 1;
   grid-row: span 2;
-  background-image: url("./images/book.jpg");
+  aspect-ratio: 9/16;
+}
+
+/* مربع */
+.square {
+  aspect-ratio: 1/1;
+  width: 100%;
+  height: auto;
 }
 
 /* 🟢 گوشی */
