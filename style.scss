@@ -1,6 +1,7 @@
 @import "./node_modules/bootstrap/dist/css/bootstrap.min.css";
 @import "./node_modules/bootstrap-icons/font/bootstrap-icons.css";
 @import "./node_modules/@fortawesome/fontawesome-free/css/all.min.css";
+
 @font-face {
   font-family: "Dana";
   src: url("./fonts/Dana/dana_regular.woff") format("woff"),
@@ -8,6 +9,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 body {
   display: flex;
   flex-direction: column;
@@ -53,9 +55,7 @@ body {
   flex-direction: column;
 }
 
-.grid-base,
-.grid-container2,
-.grid-container {
+.grid-base {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 10px;
@@ -65,10 +65,12 @@ body {
 }
 
 .grid-container {
+  @extend .grid-base;
   margin: 30px auto 10px;
 }
 
 .grid-container2 {
+  @extend .grid-base;
   position: relative;
 }
 
@@ -79,14 +81,16 @@ body {
   border-radius: var(--border-radius-md);
   background-color: var(--color-white);
   transition: transform var(--transition-base);
-}
-.grid-item:hover {
-  transform: scale(1.02);
-}
-.grid-item img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .overlay1 {
@@ -123,10 +127,11 @@ body {
   font-size: var(--font-size-md);
   cursor: pointer;
   transition: background-color var(--transition-base);
-}
-.btn-more:hover {
-  background-color: var(--color-primary);
-  filter: brightness(90%);
+
+  &:hover {
+    background-color: var(--color-primary);
+    filter: brightness(90%);
+  }
 }
 
 .line {
@@ -137,7 +142,7 @@ body {
 }
 
 ::selection {
-  background-color: rgba(255, 93, 53, 0.4235294118);
+  background-color: #ff5d356c;
   color: #000000;
 }
 
@@ -318,7 +323,7 @@ header {
 }
 
 .header-user-actions .add-booth button:hover {
-  background-color: rgba(255, 93, 53, 0.0941176471);
+  background-color: #ff5d3518;
 }
 
 .navbar2 {
@@ -354,7 +359,7 @@ header {
 }
 
 .basalam_avatar2 img {
-  outline: 2px solid rgba(0, 0, 128, 0.5333333333);
+  outline: 2px solid #00008088;
 }
 
 .btn1 {
@@ -618,7 +623,7 @@ header {
 
 .top-products .products .product-cards .card .offer .discount {
   color: var(--color-primary);
-  background-color: rgba(255, 93, 53, 0.1725490196);
+  background-color: #ff5d352c;
   border-radius: 5px;
   margin-top: 10px;
   padding: 3px 3px;
@@ -641,7 +646,7 @@ header {
 }
 
 .time-box {
-  background-color: rgba(255, 93, 53, 0.1725490196);
+  background-color: #ff5d352c;
   color: var(--color-primary);
   padding: 0 4px;
   border-radius: 5px;
@@ -650,15 +655,12 @@ header {
 .text-primary2 {
   color: var(--color-primary);
 }
-
 .bg-primary-light {
   background-color: var(--color-primary-light);
 }
-
 .cursor-pointer {
   cursor: pointer;
 }
-
 .flex-center {
   display: flex;
   justify-content: center;
@@ -773,7 +775,7 @@ header {
   border-radius: 7px;
   position: absolute;
   top: 10px;
-  right: 10px;
+  right: calc((389.7px - 369.7px) / 2);
 }
 
 .story .stories > div .text {
@@ -782,7 +784,7 @@ header {
   gap: 20px;
   position: absolute;
   bottom: 2.5px;
-  right: 10px;
+  right: calc((389.7px - 369.7px) / 2);
 }
 
 .story .stories > div .text .magazine {
@@ -839,4 +841,11 @@ header {
   background-color: #b33010;
 }
 
-/*# sourceMappingURL=style.css.map */
+@media screen and (max-width: 480px) and (max-height: 800px) {
+}
+
+@media screen and (min-width: 481px) and (max-width: 1024px) and (min-height: 801px) and (max-height: 1366px) {
+}
+
+@media screen and (min-width: 1025px) and (min-height: 800px) {
+}
