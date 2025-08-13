@@ -10,6 +10,12 @@
   font-style: normal;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: #f3f3f4;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -17,16 +23,23 @@
   font-family: "Dana", sans-serif;
 }
 
+/* متغیرهای CSS پایه */
 :root {
   --color-primary: #ff5c35;
   --color-primary-light: #ff5d352c;
+  --color-primary-hover: #ff5d3518;
   --color-gray: #f3f3f4;
   --color-text: #333;
+  --color-white: #ffffff;
+  --color-black-alpha: #33333380;
   --border-radius-sm: 4px;
   --border-radius-md: 8px;
   --spacing-sm: 8px;
   --spacing-md: 12px;
   --spacing-lg: 20px;
+  --font-size-sm: 0.9rem;
+  --font-size-md: 1.185rem;
+  --font-size-lg: 24px;
 }
 
 ::selection {
@@ -37,7 +50,7 @@
 .image1 {
   width: 100vw;
   display: block;
-  max-width: 100%;
+  min-width: 100%;
   height: auto;
 }
 
@@ -48,6 +61,7 @@ header {
   justify-content: space-between;
   padding: 0 5%;
   flex-wrap: wrap;
+  background-color: #ffffff;
   gap: 10px;
 }
 
@@ -363,7 +377,8 @@ header {
   position: relative;
 }
 
-.top-products .basalam-foot-logo-circle, .products {
+.top-products .basalam-foot-logo-circle,
+.products {
   background-color: var(--color-primary);
   display: flex;
 }
@@ -411,7 +426,7 @@ header {
   color: #ffffff;
 }
 
-.top-products .products .texts .see-all{
+.top-products .products .texts .see-all {
   cursor: pointer;
 }
 
@@ -437,7 +452,7 @@ header {
   margin-top: 5px;
   width: 207.27px;
   height: 207.27px;
-  background: url('./images/product1.jpg') no-repeat center center;
+  background: url("./images/product1.jpg") no-repeat center center;
   background-size: cover;
   border-radius: var(--border-radius-md);
   position: relative;
@@ -538,13 +553,179 @@ header {
   border-radius: 5px;
 }
 
-.text-primary2 { color: var(--color-primary); }
-.bg-primary-light { background-color: var(--color-primary-light); }
-.cursor-pointer { cursor: pointer; }
+.text-primary2 {
+  color: var(--color-primary);
+}
+.bg-primary-light {
+  background-color: var(--color-primary-light);
+}
+.cursor-pointer {
+  cursor: pointer;
+}
 .flex-center {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.gold-ads,
+.tools-ads {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.gold-ads {
+  background-image: url("./images/gold3.webp");
+  width: 1424px;
+  height: 264.75px;
+  margin: 30px auto;
+}
+
+.tools-ads {
+  background-image: url(./images/tools_image.webp);
+}
+
+.videos {
+  display: flex;
+  justify-self: center;
+  width: 1424px;
+  height: 349.94px;
+  margin-bottom: 56px;
+  gap: var(--spacing-lg);
+  flex-direction: column;
+}
+
+.videos .video,
+.videos .video2 {
+  display: flex;
+  gap: 30px;
+}
+
+.videos .video2 {
+  overflow: hidden;
+}
+
+.videos .video div,
+.videos .video2 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 7px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.videos .video div {
+  background-image: url("./images/ring_image.jpg");
+  width: 174.34px;
+  height: 309.94px;
+}
+
+.videos .video2 div {
+  background-image: url("./images/barbequo_image.jpg");
+  width: 389.7px;
+  height: 219.2px;
+  flex-shrink: 0;
+}
+
+.videos button {
+  border: none;
+  background-color: var(--color-black-alpha);
+  width: 24px;
+  height: 25px;
+  color: var(--color-white);
+}
+
+.videos button i {
+  font-size: var(--font-size-lg);
+  width: 24px;
+  height: 25px;
+  line-height: 25px;
+}
+
+.story {
+  margin: 30px auto;
+  display: flex;
+  flex-direction: column;
+  width: 1424px;
+  height: 284.52px;
+  gap: 20px;
+}
+
+.story .stories {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  overflow: hidden;
+}
+
+.story .stories > div {
+  width: 389.7px;
+  height: 244.52px;
+  background-color: #ffffff;
+  border-radius: 7px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.story .stories > div img {
+  width: 369.7px;
+  height: 164.52px;
+  border-radius: 7px;
+  position: absolute;
+  top: 10px;
+  right: calc((389.7px - 369.7px) / 2);
+}
+
+.story .stories > div .text {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  bottom: 2.5px;
+  right: calc((389.7px - 369.7px) / 2);
+}
+
+.story .stories > div .text .magazine {
+  color: var(--color-black-alpha);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6 ستون */
+  grid-template-rows: repeat(2, 200px); /* 2 ردیف */
+  gap: 10px;
+  width: 90%;
+  margin: auto;
+}
+
+.grid-item {
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+/* مربع‌ها */
+.square {
+  grid-column: span 1;
+  grid-row: span 1;
+  background-image: url("./images/charlie_chaplin.jpg");
+}
+
+/* مستطیل افقی */
+.rect-horizontal {
+  grid-column: span 2;
+  grid-row: span 1;
+  background-image: url("./images/book.jpg");
+}
+
+/* مستطیل عمودی */
+.rect-vertical {
+  grid-column: span 1;
+  grid-row: span 2;
+  background-image: url("./images/book.jpg");
 }
 
 /* 🟢 گوشی */
