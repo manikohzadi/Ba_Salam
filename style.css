@@ -714,32 +714,24 @@ header {
   object-fit: cover;
 }
 
-/* مستطیل عمودی */
 .rect-vertical {
   grid-row: span 2;
   aspect-ratio: 9/16;
 }
 
-/* مربع */
 .square {
   aspect-ratio: 1/1;
   width: 100%;
   height: auto;
 }
 
-/* 🟢 گوشی */
 @media screen and (max-width: 480px) and (max-height: 800px) {
-  /* استایل مخصوص گوشی */
 }
 
-/* 🟡 تبلت */
 @media screen and (min-width: 481px) and (max-width: 1024px) and (min-height: 801px) and (max-height: 1366px) {
-  /* استایل مخصوص تبلت */
 }
 
-/* 🔵 دسکتاپ */
 @media screen and (min-width: 1025px) and (min-height: 800px) {
-  /* استایل مخصوص دسکتاپ */
 }
 
 @media (prefers-reduced-motion: reduce) {
