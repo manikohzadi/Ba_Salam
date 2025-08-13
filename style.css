@@ -839,4 +839,74 @@ header {
   background-color: #b33010;
 }
 
+.footer {
+  background: #fff;
+  font-family: sans-serif;
+  direction: rtl;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background: #fafafa;
+  border-bottom: 1px solid #eee;
+}
+
+.footer-main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.footer-apps ul,
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 50px;
+}
+
+.footer-logo img {
+  max-height: 100px;
+}
+
+.footer-newsletter {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.footer-newsletter input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.footer-newsletter button {
+  padding: 8px 20px;
+  background: #ff5c39;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.footer-certificates {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #888;
+  padding-bottom: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
